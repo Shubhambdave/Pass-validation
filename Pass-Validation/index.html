@@ -47,22 +47,29 @@
           } else {
             lowerCase.classList.remove('valid');
           }
+            
             //UPPERCASE validation check
             if(upper.test(data)){
                 UpperCase.classList.add('valid');
             }else{
                 UpperCase.classList.remove('valid');
             }
+            
+            
             if(number.test(data)){
                 digit.classList.add('valid');
             }else{
                 digit.classList.remove('valid');
             }
+            
+            
             if(special.test(data)){
                 specialChar.classList.add('valid');
             }else{
                 specialChar.classList.remove('valid');
             }
+            
+            
             if(length.test(data)){
                 minlength.classList.add('valid');
             }else{
@@ -84,8 +91,3 @@
     </script> 
 </body>
 </html>
-
-
-
-
-//sej baki chhe 
