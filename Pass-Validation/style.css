@@ -12,7 +12,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-height: 100vh;
-background:#4194c0;
+
+background: linear-gradient(135deg,#4e54c8,#8f94fb);
 }
 
 .box
@@ -68,6 +69,7 @@ font-family: fontAwesome;
     padding: 10px;
     margin-top:30px;border-radius: 8px;
     box-shadow: 0 15px 25px rgba(0,0,0,0,15);
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 }
 .validation ul
 {
@@ -80,7 +82,7 @@ font-family: fontAwesome;
 {
 position: relative;
 list-style: none;
-color: #fff;
+color: #ffffff;
 font-size:0.85em;
 transition: 0.5s;
 }
