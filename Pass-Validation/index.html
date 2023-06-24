@@ -10,13 +10,13 @@
 <body>
     <div class="box">
         <div class="inputBox">
-            <input type="password" id="pwd" placeholder="password" onkeyup="checkPassword(this.value)">
+            <input type="password" id="pswrd" placeholder="Password" onkeyup="checkPassword(this.value)">
             <span id="toggleBtn"></span>
         </div>
         <div class="validation">
             <ul>
                 <li id="lower">At least one lowercase character</li>
-                <li id="upper">At least one Uppercase character</li>
+                <li id="upper">At least one uppercase character</li>
                 <li id="number">At least one number</li>
                 <li id="special">At least one Special character</li>
                 <li id="length">At least 8 character</li>
@@ -24,14 +24,14 @@
         </div>
     </div> 
     <script>
-        let pwd = document.getElementById('pwd');
-        let toggleBtn = document.getElementById("toggleBtn");
+        let pswrd = document.getElementById('pswrd');
+        let toggleBtn = document.getElementById('toggleBtn');
         
-        let lowerCase= document.getElementById("lower");
-        let uppercase= document.getElementById("upper");
-        let digit = document.getElementById("number");
-        let specialChar = document.getElementById("special");
-        let minlength = document.getElementById("length");
+        let lowerCase= document.getElementById('lower');
+        let uppercase= document.getElementById('upper');
+        let digit = document.getElementById('number');
+        let specialChar = document.getElementById('special');
+        let minlength = document.getElementById('length');
 
         function checkPassword(data){
             //js ragular expression pattern
@@ -42,52 +42,48 @@
             const length= new RegExp("(?=.{8,})");
             
             //lowercase validation check
-          if (lower.test(data)) {
+        if (lower.test(data)) {
             lowerCase.classList.add('valid');
-          } else {
+        } else {
             lowerCase.classList.remove('valid');
-          }
-            
-            //UPPERCASE validation check
-            if(upper.test(data)){
-                UpperCase.classList.add('valid');
-            }else{
-                UpperCase.classList.remove('valid');
-            }
-            
-            
-            if(number.test(data)){
-                digit.classList.add('valid');
-            }else{
-                digit.classList.remove('valid');
-            }
-            
-            
-            if(special.test(data)){
-                specialChar.classList.add('valid');
-            }else{
-                specialChar.classList.remove('valid');
-            }
-            
-            
-            if(length.test(data)){
-                minlength.classList.add('valid');
-            }else{
-                minlength.classList.remove('valid');
-            }
-            
         }
+        //UPPERCASE validation check
+        if(upper.test(data)){
+            uppercase.classList.add('valid');
+        }else{
+            uppercase.classList.remove('valid');
+        }
+        if(number.test(data)){
+            digit.classList.add('valid');
+        }else{
+            digit.classList.remove('valid');
+        }
+        if(special.test(data)){
+            specialChar.classList.add('valid');
+        }else{
+            specialChar.classList.remove('valid');
+        }
+        if(length.test(data)){
+            minlength.classList.add('valid');
+        }else{
+            minlength.classList.remove('valid');
+        }
+            
+    }
 
         //show hide passwords
         toggleBtn.onclick = function(){ 
-            if (pwd.type ==='password'){
-                pwd.setAttribute('type','text');
+            if (pswrd.type ==='password'){
+                pswrd.setAttribute('type','text');
                 toggleBtn.classList.add("hide")
             }else{
-                pwd.setAttribute('type','password');
+                pswrd.setAttribute('type','password');
                 toggleBtn.classList.remove("hide"); 
             }
         }
     </script> 
 </body>
 </html>
+
+
+
